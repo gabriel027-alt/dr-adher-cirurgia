@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-clinical-bg: #070a10;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #070a10;
+  color: #f1f5f9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 50% -10%, rgba(56, 189, 248, 0.09) 0%, rgba(7, 10, 16, 0) 55%),
+    radial-gradient(circle at 90% 30%, rgba(14, 165, 233, 0.04) 0%, rgba(7, 10, 16, 0) 40%),
+    radial-gradient(circle at 10% 70%, rgba(203, 178, 106, 0.03) 0%, rgba(7, 10, 16, 0) 40%);
+  background-attachment: fixed;
+}
+
+/* Custom scrollbar for clinical dark mode */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070a10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Luxury surgical luminescent effects */
+.surgical-glow-border {
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.18);
+}
+
+.luxury-gold-border {
+  border: 1px solid rgba(203, 178, 106, 0.35);
+  box-shadow: 0 0 20px -5px rgba(203, 178, 106, 0.15);
+}
+
+.surgical-card {
+  background-color: rgba(11, 15, 25, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(30, 41, 59, 0.7);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.surgical-card:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 16px 36px -12px rgba(56, 189, 248, 0.14);
+}
+
+/* Ambient surgical aura drift animations */
+@keyframes ambientDrift {
+  0%, 100% {
+    transform: translate(-50%, 0%) scale(1);
+  }
+  50% {
+    transform: translate(-48%, 6%) scale(1.06);
+  }
+}
+
+@keyframes ambientFloat {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-4%, -5%);
+  }
+}
+
+@keyframes floatSlow {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-30px, 40px) scale(1.08);
+  }
+  100% {
+    transform: translate(25px, -30px) scale(0.95);
+  }
+}
+
+@keyframes scanDown {
+  0% {
+    top: -5%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  85% {
+    opacity: 0.6;
+  }
+  100% {
+    top: 105%;
+    opacity: 0;
+  }
+}
+
+@keyframes sutureGlow {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-suture-trace {
+  stroke-dasharray: 200;
+  animation: sutureGlow 5s ease-in-out infinite;
+}
+
+@keyframes graftPulse {
+  0%, 100% {
+    stroke-opacity: 0.55;
+    filter: drop-shadow(0 0 2px rgba(45, 212, 191, 0.3));
+  }
+  50% {
+    stroke-opacity: 1;
+    filter: drop-shadow(0 0 7px rgba(45, 212, 191, 0.8));
+  }
+}
+
+.animate-graft-pulse {
+  animation: graftPulse 3.5s ease-in-out infinite;
+}
+
+.animate-ambient-drift {
+  animation: ambientDrift 22s ease-in-out infinite;
+}
+
+.animate-ambient-float {
+  animation: ambientFloat 26s ease-in-out infinite;
+}
+
+/* Accessibility: respect user prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-ambient-drift,
+  .animate-ambient-float,
+  .animate-suture-trace,
+  .animate-graft-pulse {
+    animation: none !important;
+  }
+}
