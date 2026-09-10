@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import React from "react";
 import { ShieldCheck, Award, Building2, Hospital, ArrowRight, BookmarkCheck } from "lucide-react";
 import doctorContent from "@/data/doctorContent";
@@ -39,6 +39,7 @@ export default function AboutDoctor() {
     />
   </div>
 </div>
+
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
