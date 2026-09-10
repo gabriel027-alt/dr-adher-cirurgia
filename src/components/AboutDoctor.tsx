@@ -28,9 +28,17 @@ export default function AboutDoctor() {
   return (
     <section id="sobre" className="relative py-20 lg:py-28 bg-[#070a10] border-t border-slate-850 overflow-hidden">
       {/* Luz focal cialítica de fundo */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <div className="h-[520px] w-[520px] rounded-full bg-sky-500/5 blur-[140px]" />
-      </div>
+      <div className="lg:col-span-5 relative">
+  <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+    <Image
+      src="/dr-adher.jpg"
+      alt="Dr. Adher Leonardo Leite Moura"
+      fill
+      className="object-cover"
+      priority
+    />
+  </div>
+</div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
