@@ -34,7 +34,7 @@ export default function AboutDoctor() {
       src="/images/dr-adher.jpg"
       alt="Dr. Adher Leonardo Leite Moura"
       fill
-      className="object-cover"
+      className="object-contain"
       priority
     />
   </div>
