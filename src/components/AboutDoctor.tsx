@@ -31,7 +31,7 @@ export default function AboutDoctor() {
       <div className="lg:col-span-5 relative">
   <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
     <Image
-      src="/dr-adher.jpg"
+      src="/images/dr-adher.jpg"
       alt="Dr. Adher Leonardo Leite Moura"
       fill
       className="object-cover"
