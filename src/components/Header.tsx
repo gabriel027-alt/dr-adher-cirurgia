@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import doctorContent from "@/data/doctorContent";
-import { Activity, ShieldCheck, Calendar, Menu, X, ArrowRight } from "lucide-react";
+import { ShieldCheck, Calendar, Menu, X, ArrowRight } from "lucide-react";
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,8 +21,15 @@ export const Header: React.FC = () => {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6 lg:px-8">
         {/* Brand & CRM */}
         <a href="#" className="group flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-sky-500/30 bg-slate-900/80 shadow-inner shadow-sky-500/10 transition-transform duration-300 group-hover:scale-105">
-            <Activity className="h-5 w-5 text-sky-400" />
+          <div className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-sky-500/30 bg-white p-1 shadow-inner shadow-sky-500/10 transition-transform duration-300 group-hover:scale-105">
+            <Image
+              src="/images/logoarticulare.png"
+              alt="Clínica Articulare"
+              width={36}
+              height={36}
+              className="object-contain"
+              priority
+            />
           </div>
           <div>
             <div className="flex items-center gap-2">

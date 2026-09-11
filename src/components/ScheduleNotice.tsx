@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import doctorContent from "@/data/doctorContent";
 import {
@@ -182,6 +183,41 @@ export const ScheduleNotice: React.FC = () => {
                   </a>
                 </div>
 
+                {/* Grid Visual com Fachada e Recepção Real */}
+                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="group relative h-44 overflow-hidden rounded-xl border border-slate-800 bg-slate-900 shadow-md">
+                    <Image
+                      src="/images/frentearticulare1.jpg"
+                      alt="Fachada Clínica Articulare Montes Claros"
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+                    <div className="absolute bottom-2.5 left-3 right-3">
+                      <span className="rounded bg-sky-950/90 border border-sky-500/30 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-sky-300">
+                        Fachada Oficial
+                      </span>
+                      <p className="mt-1 text-xs font-semibold text-white">Sede Própria no Jardim São Luiz</p>
+                    </div>
+                  </div>
+
+                  <div className="group relative h-44 overflow-hidden rounded-xl border border-slate-800 bg-slate-900 shadow-md">
+                    <Image
+                      src="/images/dentroarticulare.jpg"
+                      alt="Recepção e Espera Clínica Articulare"
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+                    <div className="absolute bottom-2.5 left-3 right-3">
+                      <span className="rounded bg-teal-950/90 border border-teal-500/30 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-teal-300">
+                        Estrutura
+                      </span>
+                      <p className="mt-1 text-xs font-semibold text-white">Ambiente Climatizado &amp; Exclusivo</p>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Dark Custom Interactive Google Maps Embed */}
                 <div className="mt-4 rounded-xl overflow-hidden border border-slate-800/80 aspect-[16/6] relative bg-slate-900 shadow-inner">
                   <iframe
@@ -240,7 +276,7 @@ export const ScheduleNotice: React.FC = () => {
           </div>
         </div>
 
-        {/* Interactive Surgical Reimbursement & TUSS Guide Module (R$ 15K - R$ 20K standard) */}
+        {/* Interactive Surgical Reimbursement & TUSS Guide Module */}
         <div className="mt-16 rounded-3xl border border-slate-700/80 bg-slate-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur-2xl">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-slate-800 pb-6">
             <div>
